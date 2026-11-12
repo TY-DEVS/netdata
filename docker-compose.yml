@@ -4,6 +4,7 @@ services:
   netdata:
     image: netdata/netdata:stable
     restart: unless-stopped
+    hostname: infrahost-vps1
     expose:
       - "19999"
     cap_add:
@@ -11,6 +12,10 @@ services:
       - SYS_ADMIN
     security_opt:
       - apparmor:unconfined
+    environment:
+      - NETDATA_CLAIM_TOKEN=VSIn35uruw9AgoM5ll9kOrr2XK_mZE_iesIPG4mIUb7Jk40gYQxawdC5-2YZyGzTylZWspfNOd_W91URK7pQ1ocXzUX1hoV2ifRw00SeTHEeoH_-pYfZcGBuN5xxPLJ2doMeHiQ
+      - NETDATA_CLAIM_URL=https://app.netdata.cloud
+      - NETDATA_CLAIM_ROOMS=86e25d8c-eb2e-4462-b494-58e6aa70232a
     volumes:
       - netdataconfig:/etc/netdata
       - netdatalib:/var/lib/netdata
