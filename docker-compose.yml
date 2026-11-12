@@ -5,6 +5,8 @@ services:
     image: netdata/netdata:stable
     restart: unless-stopped
     hostname: infrahost-vps1
+    ports:
+      - "19999:19999"
     expose:
       - "19999"
     cap_add:
