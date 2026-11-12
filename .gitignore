@@ -1,6 +1,5 @@
 # Secrets
 gcs-credentials.json
-/.env
 
 # Per-user local working directory (audits, scratch, drafts, temp artifacts).
 # AI agents that follow AGENTS.md treat this as the place to write run-time data.
@@ -67,7 +66,6 @@ netdata-coverity-analysis.tgz
 
 .cproject/
 .idea/
-.vscode/*
 !.vscode/settings.default.json
 .project/
 .settings/
@@ -256,3 +254,4 @@ _deps/
 # DEM owns an optional capture store; this is source, not generated artifacts.
 !/src/go/plugin/dem/synthetic/artifacts/
 !/src/go/plugin/dem/synthetic/artifacts/**
+config.bat
