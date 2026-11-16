@@ -9,6 +9,9 @@ services:
       - "19999:19999"
     expose:
       - "19999"
+    networks:
+      - default
+      - coolify
     cap_add:
       - SYS_PTRACE
       - SYS_ADMIN
@@ -35,3 +38,9 @@ volumes:
   netdataconfig:
   netdatalib:
   netdatacache:
+
+networks:
+  default:
+    driver: bridge
+  coolify:
+    external: true
